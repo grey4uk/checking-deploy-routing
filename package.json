@@ -2,7 +2,7 @@
   "name": "checking-deploy-routing",
   "version": "0.1.1",
   "private": true,
-  "homepage": "https://grey4uk.github.io/checking-deploy-routing",
+  "homepage": "https://grey4uk.github.io/checking-deploy-routing/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
