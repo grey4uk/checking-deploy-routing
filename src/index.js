@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <PersistGate loading={<Loader />} persistor={persistor}>
       <Provider store={store}>
-        <BrowserRouter basename="/goit-react-hw-08-phonebook/">
+        <BrowserRouter basename="/checking-deploy-routing">
           <App />
         </BrowserRouter>
       </Provider>
