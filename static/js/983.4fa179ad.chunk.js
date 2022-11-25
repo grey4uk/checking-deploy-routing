@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkchecking_deploy_routing=self.webpackChunkchecking_deploy_routing||[]).push([[983],{3983:function(e,c,n){n.r(c);var t=n(597),i=n(2070),o=n(3329);c.default=function(){return(0,o.jsx)(i.Z,{children:(0,o.jsx)("img",{src:t,alt:"Phone book"})})}},597:function(e,c,n){e.exports=n.p+"static/media/homeBg.f0cf83fc3d9628f1e1f5.jpg"}}]);
+//# sourceMappingURL=983.4fa179ad.chunk.js.map
