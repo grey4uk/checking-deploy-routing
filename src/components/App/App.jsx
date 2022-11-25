@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route,Outlet } from 'react-router-dom';
 import useRefreshCurrentUser from 'hooks/useRefreshCurrentUser';
 import AppBar from 'components/AppBar';
 import NotFound from 'components/NotFound';
@@ -25,20 +25,22 @@ function App() {
         <>
           {!isRefreshing && (
             <Routes>
+              <Route path='/' element={<Outlet/>}>
+
               <Route
-                path="/"
+                index
                 element={
                   <PublicRoute>
                     <HomePage />
                   </PublicRoute>
                 }
               />
-              <Route path="/contacts" element={<PrivateRoute>
+              <Route path="contacts" element={<PrivateRoute>
                 <ContactsPage />
                 </PrivateRoute>
                 } />
               <Route
-                path="/contacts/add"
+                path="contacts/add"
                 element={
                   <PrivateRoute>
                     <AddContactPage />
@@ -46,7 +48,7 @@ function App() {
                 }
               />
               <Route
-                path="/contacts/edit/:contactId"
+                path="contacts/edit/:contactId"
                 element={
                   <PrivateRoute>
                     <ChangeContactPage />
@@ -54,7 +56,7 @@ function App() {
                 }
               />
               <Route
-                path="/register"
+                path="register"
                 element={
                   <PublicRoute restricted>
                     <RegisterPage />
@@ -62,7 +64,7 @@ function App() {
                 }
               />
               <Route
-                path="/login"
+                path="login"
                 element={
                   <PublicRoute restricted>
                     <LoginPage />
@@ -77,6 +79,7 @@ function App() {
                   </PublicRoute>
                 }
               />
+              </Route>
             </Routes>
           )}
         </>
